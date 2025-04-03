@@ -1,0 +1,146 @@
+:root {
+  
+
+--Green200-lighter: hsl(148, 38%, 91%);
+--Green-600-medium: hsl(169, 82%, 27%);
+--Red: hsl(0, 66%, 54%);
+
+
+--White: hsl(0, 0%, 100%);
+--Grey-500-medium: hsl(186, 15%, 59%);
+--Grey-900-darker: hsl(187, 24%, 22%);
+
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding:  0;
+  margin: 0;
+  background-color:  var(--Grey-200-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+  font-family: "Karla", sans-serif;
+}
+
+main {
+  
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+form {
+  width: 500px;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--White);
+}
+
+input[type="text"], input[type="email"]:focus, textarea {
+  outline: none;
+}
+
+input[type="text"], input[type="email"], textarea, button {
+  width: 100%;
+}
+
+h1 {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+#names {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="text"] {
+  border: 1px solid #ddd;
+  padding: 11px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  
+}
+
+input[type="email"] {
+  border: 1px solid #ddd;
+  padding: 11px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  
+}
+
+#query-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px 10px;
+}
+
+#general, #support {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+  background-color: #ffffff;
+  color: black;
+}
+
+textarea {
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin: 10px 0px 20px;
+  resize: none;
+  padding: 10px;
+}
+
+button {
+  margin: 20px 0px 10px;
+  padding: 13px;
+  color: var(--White);
+  background-color: var(--Green-600-medium);
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+@media(max-width:600px) {
+
+  main {
+    width: 100%;
+  }
+
+  #names {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  #query-type {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.error-message {
+  color: red;
+  margin-top: -10px;
+}
+
+.positioning-error-message {
+  display: flex;
+  flex-direction: column;
+}
