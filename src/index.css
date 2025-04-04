@@ -24,12 +24,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 120vh;
+  min-height: 150vh;
   font-family: "Karla", sans-serif;
 }
 
 main {
-  
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
@@ -37,7 +36,6 @@ main {
 
 form {
   width: 500px;
-  max-width: 900px;
   display: flex;
   flex-direction: column;
   background-color: var(--White);
@@ -57,9 +55,9 @@ h1 {
 }
 
 #names {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 input[type="text"] {
@@ -81,9 +79,9 @@ input[type="email"] {
 }
 
 #query-type {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
   margin: 10px 0px 10px;
 }
 
@@ -120,19 +118,16 @@ button {
     width: 100%;
   }
 
-  #names {
-    flex-direction: column;
-    width: 100%;
+  #names, #query-type {
+    
+    grid-template-columns: 1fr;
   }
 
   form {
     width: 100%;
+    max-width: 100%;
   }
 
-  #query-type {
-    flex-direction: column;
-    width: 100%;
-  }
 }
 
 .error-message {
@@ -143,4 +138,26 @@ button {
 .positioning-error-message {
   display: flex;
   flex-direction: column;
+}
+
+.success-message {
+  background-color: var(--Grey-900-darker);
+  color: #ffffff;
+  max-width: 300px;
+  padding: 15px;
+  margin: auto;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+
+.successHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+}
+
+input[type="text"], input[type="email"], input[type="checkbox"], textarea, button:hover {
+  cursor: pointer;
 }
